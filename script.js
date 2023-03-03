@@ -154,4 +154,153 @@ do {
   console.log("Executed!");
 } while (condition);
 
-//
+//addition operators
+var a = 5;
+var b = 10;
+// console.log(a + b);
+a += b;
+// same as a = a+b
+console.log(a);
+
+var a = 5.2;
+var b = 4.5;
+console.log(a + b);
+
+// joining or concatenating 2 strings together
+var a = "Join";
+var b = " us!";
+console.log(a + b);
+// joining or concatenating a string and a number together
+var a = "Join";
+var b = 4;
+console.log(a + b);
+
+var a = "3";
+var b = 4;
+console.log(a + b);
+
+// joining or concatenating a string and a boolean together
+var a = "Join";
+var b = true;
+console.log(a + b);
+
+// joining or concatenating a string and an array together
+var a = "Join";
+var b = [1, 2];
+console.log(a + b);
+
+// joining or concatenating a number and a boolean together
+var a = true;
+var b = 12;
+console.log(a + b);
+// joining or concatenating a number and null together
+var a = null;
+var b = 12;
+console.log(a + b);
+
+// joining or concatenating a number and undefined together
+var a = undefined;
+var b = 12;
+console.log(a + b);
+
+// joining or concatenating a number and NaN together
+var a = NaN;
+var b = 12;
+console.log(a + b);
+
+// subtracting 2 numbers
+var a = 13;
+var b = 2;
+a -= b;
+// same as a=a-b;
+console.log(a);
+
+// subtracting 2 strings
+var a = "Split us";
+var b = "us";
+console.log(a - b);
+
+// subtracting a number and a string
+var a = 13;
+var b = "5";
+console.log(a - b);
+
+// multiplying 2 numbers
+var a = 13;
+var b = 2;
+a *= b;
+// same as a=a*b;
+console.log(a);
+
+// multiplying 2 float numbers
+var a = 1.3;
+var b = 2.2;
+console.log((a * b).toFixed(2));
+
+// multiplying a num with a string number
+var a = 4;
+var b = "2.2";
+console.log(a * b);
+
+// multiplying a num with a string text
+var a = 4;
+var b = "join";
+console.log(a * b);
+
+// multiplying 2 string texts
+var a = "another";
+var b = "join";
+console.log(a * b);
+
+// multiplying a num with null
+var a = 4;
+var b = null;
+console.log(a * b);
+
+// multiplying a num with infinity
+var a = 4;
+var b = Infinity;
+console.log(a * b);
+
+// dividing 2 numbers
+var a = 12;
+var b = 2;
+a /= b;
+// same as a=a/b;
+console.log(a);
+
+// dividing a num with a string number
+var a = 10;
+var b = "2";
+console.log(a / b);
+
+// dividing a float num with another number
+var a = 3.3;
+var b = 2.2;
+console.log((a / b).toFixed(2));
+
+// dividing a num with another number and using modulus
+var a = 10;
+var b = 3;
+console.log(a % b);
+
+// dividing a num with infinity
+var a = 10;
+var b = Infinity;
+console.log(a / b);
+
+// comparison operators
+console.log(1 == 1);
+console.log(1 === 1);
+console.log(1 === "1");
+console.log(1 == "1");
+console.log(1 != 2);
+console.log(1 !== "1");
+console.log(1 > 0);
+console.log(1 >= 1);
+console.log(1 >= "1");
+console.log(NaN == NaN);
+console.log(NaN != NaN);
+console.log(0 == null);
+console.log(null == undefined);
+console.log(0 == undefined);
