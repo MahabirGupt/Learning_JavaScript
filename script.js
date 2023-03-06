@@ -355,3 +355,23 @@ var anotherArray = array;
 var array = ["a", "b"];
 console.log(array);
 console.log(anotherArray);
+
+// Scope
+// Global Scope
+var test = "Global scope";
+function localScope() {
+  // overriding the “Global variable” by redeclaring the variable
+  var test = "Local scope";
+  console.log(test);
+}
+localScope();
+console.log(test);
+
+// possible only if not using strict mode
+function localScope() {
+  // automatically becomes a global variable
+  test = "Local scope";
+  console.log(test);
+}
+localScope();
+console.log(test);
