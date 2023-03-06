@@ -304,3 +304,54 @@ console.log(NaN != NaN);
 console.log(0 == null);
 console.log(null == undefined);
 console.log(0 == undefined);
+
+// boolean operators
+if (1 == 1 && 2 == 2) {
+  console.log("true");
+} else {
+  console.log("false");
+}
+
+var isTrue = true;
+console.log(!isTrue);
+
+var a = 5;
+var b = 5;
+if (a == b) {
+  console.log("Equal");
+} else {
+  console.log("Not equal");
+}
+// using ternary operator
+console.log(a == b ? "Equal" : "Not Equal");
+
+var a = 5;
+var b = 6;
+console.log(a + b * 2);
+console.log((a + b) * 2);
+
+// Primitive and Reference Types
+var aNumber = 5;
+console.log(aNumber);
+var anotherNumber = aNumber;
+console.log(anotherNumber);
+aNumber = 12;
+console.log(aNumber);
+console.log(anotherNumber);
+
+var array = [1, 2, 3];
+console.log(typeof array);
+var anotherArray = array;
+console.log(array);
+console.log(anotherArray);
+array.push(4);
+console.log(array);
+console.log(anotherArray);
+
+var array = [1, 2, 3];
+console.log(typeof array);
+var anotherArray = array;
+// creating a new object
+var array = ["a", "b"];
+console.log(array);
+console.log(anotherArray);
