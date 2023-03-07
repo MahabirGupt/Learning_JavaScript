@@ -375,3 +375,50 @@ function localScope() {
 }
 localScope();
 console.log(test);
+
+// Array
+var array = [1, 2, 3];
+console.log(array.length);
+console.log(array[1]);
+// changing the value of array[1]
+array[1] = 100;
+console.log(array);
+array[3] = 200;
+console.log(array);
+
+// forEach() method
+var array = [1, 2, 3];
+// creating an annoynomus function that takes an argument element. Argument name can be anything
+array.forEach(function (element) {
+  console.log(element);
+});
+
+// push
+var array = [1, 2, 3];
+array.push(4);
+console.log(array);
+
+var array1 = [1, 2, 3];
+array1.push(4);
+console.log(array1);
+
+var array2 = [1, 2, 3, ,];
+array2.push(4);
+console.log(array2);
+
+// pop
+var array = [1, 2, 3];
+// pop does not take any argument
+// array.pop();
+console.log(array.pop());
+console.log(array);
+
+// shift
+var array = [1, 2, 3, 4];
+console.log(array.shift());
+console.log(array);
+
+// unshift
+var array = [1, 2, 3, 4];
+array.unshift("new_element");
+console.log(array);
