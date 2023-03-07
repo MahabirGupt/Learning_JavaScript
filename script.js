@@ -422,3 +422,35 @@ console.log(array);
 var array = [1, 2, 3, 4];
 array.unshift("new_element");
 console.log(array);
+
+// indexOf
+var array = [1, 2, 3, 4];
+array.unshift("new_element");
+console.log(array.indexOf("new_element"));
+
+var array = [1, 2, 3, 4];
+array.unshift("new_element");
+array[array.indexOf("new_element")] = "old_element";
+// same as array[0] = "old_element";
+console.log(array);
+
+// getting part of the elements of the array
+var newArray = array.splice(3);
+// 3 is the index position from which the array will be slice
+console.log(newArray);
+
+// getting the middle element of the array
+var middleArray = array.splice(2, 2);
+// 2,2 first 2 is the element number and the second 2 is the number of elements that we want to slice
+console.log(middleArray);
+console.log(array);
+
+// slice
+var array = [1, 2, 3, 4];
+array.unshift("new_element");
+array[array.indexOf("new_element")] = "old_element";
+// same as array[0] = "old_element";
+console.log(array);
+var sliceArray = array.slice(2, 4);
+console.log(sliceArray);
+console.log(array);
