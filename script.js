@@ -454,3 +454,43 @@ console.log(array);
 var sliceArray = array.slice(2, 4);
 console.log(sliceArray);
 console.log(array);
+
+// filter method
+var array = [1, 2, 3, 4];
+array.unshift("new_element");
+array[array.indexOf("new_element")] = "old_element";
+// same as array[0] = "old_element";
+// creating an anoynous function and passing in the value as argument
+// value can be any name but must pass an argument
+console.log(
+  array.filter(function (value) {
+    return value > 2;
+  })
+);
+// print the original array
+console.log(array);
+
+// map method
+var array = [1, 2, 3, 4];
+array.unshift("new_element");
+array[array.indexOf("new_element")] = "old_element";
+// same as array[0] = "old_element";
+// creating an anoynous function and passing in the value as argument
+// value can be any name but must pass an argument
+console.log(
+  array.map(function (value) {
+    return value * 2;
+  })
+);
+// print the original array
+console.log(array);
+
+// reverse method
+var array = [1, 2, 3, 4];
+array.unshift("new_element");
+array[array.indexOf("new_element")] = "old_element";
+// same as array[0] = "old_element";
+// for reverse method do not need to pass and argument
+console.log(array.reverse());
+// print the original array
+console.log(array);
