@@ -528,3 +528,61 @@ console.log(
   })
 );
 console.log(array);
+
+// creating an object
+var person = {
+  identity: "Mahabir",
+  // we use colon: and not =
+  // same as
+  "first-identity": "Mahabir",
+  age: 42,
+  // same as
+  age: 42,
+  // creating another object in an object
+  details: {
+    hobbies: ["Sports", "Cooking"],
+    location: "Germany",
+  },
+  // creating a function inside an object
+  greet: function () {
+    console.log("Hello!");
+  },
+};
+console.log(person);
+console.log(person.age);
+console.log(person.identity);
+console.log(person.details.hobbies);
+console.log(person["first-identity"]);
+// calling the function greet
+person.greet();
+console.log(typeof person.identity);
+// same as
+var greet = function () {};
+// should not use this method
+console.log(person["age"]);
+
+var field = "identity";
+console.log(person[field]);
+
+// using this keyword
+var person = {
+  identity: "Mahabir",
+  // we use colon: and not =
+  // same as
+  "first-identity": "Mahabir",
+  age: 42,
+  // same as
+  age: 42,
+  // creating another object in an object
+  details: {
+    hobbies: ["Sports", "Cooking"],
+    location: "Germany",
+  },
+  greet: function () {
+    console.log("Hello, I am " + this.identity);
+  },
+};
+person.identity = "Anish";
+console.log(person.identity);
+console.log(person);
+person.greet();
