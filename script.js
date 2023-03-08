@@ -494,3 +494,24 @@ array[array.indexOf("new_element")] = "old_element";
 console.log(array.reverse());
 // print the original array
 console.log(array);
+
+// concat operation
+var array = [1, 2, 3, 4];
+array.unshift("new_element");
+array[array.indexOf("new_element")] = "old_element";
+
+var newArray = ["join", "me"];
+console.log(array.concat(newArray));
+console.log(array);
+console.log(newArray);
+
+// join operation
+var array = [1, 2, 3, 4];
+array.unshift("new_element");
+array[array.indexOf("new_element")] = "old_element";
+
+// var newArray = ["join", "me"];
+// console.log(array.join(newArray));
+console.log(array.join(","));
+console.log(array);
+// console.log(newArray);
