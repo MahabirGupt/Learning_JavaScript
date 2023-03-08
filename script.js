@@ -515,3 +515,16 @@ array[array.indexOf("new_element")] = "old_element";
 console.log(array.join(","));
 console.log(array);
 // console.log(newArray);
+
+// reducing arrays
+var array = [1, 2, 3, 4];
+
+// reduce takes function as an argument
+// function takes 2 arguments - total and value
+console.log(
+  array.reduce(function (total, value) {
+    console.log("total = " + total + " Value = " + value);
+    return total + value;
+  })
+);
+console.log(array);
