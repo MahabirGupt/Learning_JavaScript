@@ -606,3 +606,15 @@ var person1 = {
 
 console.log(person == anotherPerson);
 console.log(person == person1);
+
+var person = {
+  index: "Mahabir",
+  age: 42,
+};
+// creating object using the static method create
+// must pass an argument in the function create
+var anotherPerson = Object.create(null);
+anotherPerson.name = "Anishkaa";
+console.log(anotherPerson);
+var anotherPerson = Object.create(person);
+console.log(anotherPerson.age);
