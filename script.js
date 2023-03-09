@@ -586,3 +586,23 @@ person.identity = "Anish";
 console.log(person.identity);
 console.log(person);
 person.greet();
+
+// creating object non literal notation
+var anotherPerson = new Object();
+// Object here is a built-in Object
+anotherPerson.name = "Anishkaa";
+anotherPerson.age = 8;
+console.log(anotherPerson);
+
+var person = {
+  identity: "Anishkaa",
+  age: 8,
+};
+
+var person1 = {
+  identity: "Anishkaa",
+  age: 8,
+};
+
+console.log(person == anotherPerson);
+console.log(person == person1);
