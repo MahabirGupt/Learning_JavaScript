@@ -707,3 +707,33 @@ var anish = new Person("Anish", 11);
 var anishkaa = new Person("Anishkaa", 8);
 console.log(anish);
 console.log(anishkaa);
+
+// four different ways of creating objects
+// 1.Literal Notation
+var person = {
+  identity: "Anish",
+  age: 11,
+};
+console.log(person);
+console.log(person instanceof Object);
+
+// 2. 2nd way of creating an object
+var person = new Object();
+person.name = "Anish";
+person.age = 11;
+console.log(person);
+
+// 3. 3rd way using Object create
+var person = Object.create(null); //you can pick your prototype and set it to null if you don't want this to have a prototype
+person.name = "Anish";
+person.age = 11;
+console.log(person);
+
+// 4. 4th way using constructor function
+function Person() {
+  this.name = "Anish";
+  this.age = 11;
+}
+
+var person = new Person(); //not using the built-in new Object() but the function Person
+console.log(person);
