@@ -693,3 +693,17 @@ anotherPerson.greetGeneral();
 
 // checking if a variable is an instance of a constructor function
 console.log(person instanceof Person);
+
+// Person constructor function and passing in parameters
+function Person(name, age) {
+  this.name = name;
+  this.age = age;
+}
+
+var person = new Person("Anish", 11); //passing in the parameters
+console.log(person);
+// OR
+var anish = new Person("Anish", 11);
+var anishkaa = new Person("Anishkaa", 8);
+console.log(anish);
+console.log(anishkaa);
