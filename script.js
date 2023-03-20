@@ -618,3 +618,78 @@ anotherPerson.name = "Anishkaa";
 console.log(anotherPerson);
 var anotherPerson = Object.create(person);
 console.log(anotherPerson.age);
+
+// Prototypes Introduction
+var person = {
+  index: "Mahabir",
+  age: 42,
+};
+// also known as dunder proto
+console.log(person.__proto__);
+
+Object.prototype.greet = function () {
+  console.log("Hello there! I am  " + this.index + "!");
+};
+
+// create an object
+var max = Object.create(person);
+var anna = Object.create(person);
+anna.index = "Anna";
+
+console.log(max.index);
+max.greet();
+anna.greet();
+// person.greet();
+// console.log(person.toString());
+console.log(anna.__proto__ == person);
+console.log(anna.__proto__.__proto__ == Object.prototype);
+// safer way of checking
+console.log(Object.getPrototypeOf(anna) == person);
+
+// constructor functions
+function Person() {
+  this.name = "Anishkaa";
+  // this refers to the person, “Anishkaa”
+  this.greet = function () {
+    console.log("Hello I am " + this.name);
+  };
+}
+console.log(this.name);
+Person.prototype.greet = function () {
+  console.log("Hello!");
+};
+Person.prototype.name = "Anish";
+//constructing an object using the function Person
+var person = new Person();
+// person.name = "Max";
+console.log(person.name);
+
+person.greet();
+console.log(person);
+console.log(person.__proto__ == Object.prototype);
+console.log(person.__proto__ == Person);
+console.log(person.__proto__ == Person.prototype);
+
+// constructor functions
+function Person() {
+  this.name = "Anishkaa";
+  // this refers to the person, “Anishkaa”
+  this.greet = function () {
+    console.log("Hello I am " + this.name);
+  };
+}
+
+Person.prototype.greetGeneral = function () {
+  console.log("Hello");
+};
+var person = new Person();
+person.name = "Max"; //overwriting the instance not the constructor function
+Person.prototype.name = "Anish";
+person.greet();
+
+var anotherPerson = new Person();
+anotherPerson.greet();
+anotherPerson.greetGeneral();
+
+// checking if a variable is an instance of a constructor function
+console.log(person instanceof Person);
