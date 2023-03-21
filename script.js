@@ -737,3 +737,43 @@ function Person() {
 
 var person = new Person(); //not using the built-in new Object() but the function Person
 console.log(person);
+
+function fn() {
+  console.log(this); //is not refering to the global object but instead to the part on the left of the dot which is obj
+}
+// fn();
+
+var obj = {
+  obfn: fn, // holds a reference to this function
+};
+
+obj.obfn();
+
+// if want to refer to the global object this then use bind
+obj.obfn.bind(this)();
+
+function fn() {
+  console.log(this); //is not refering to the global object but instead to the part on the left of the dot which is obj
+}
+var obj = {
+  obfn: fn, // holds a reference to this function
+};
+var person = {
+  identity: "Anish",
+};
+obj.obfn.bind(person)(); //with bind I can pass whatever this here should refer to
+
+function fn(message) {
+  console.log(message + this);
+}
+var obj = {
+  //this refers to this object, obj
+  obfn: fn,
+};
+var person = {
+  identity: "Anish",
+};
+obj.obfn.bind(person, "Hello")(); //can also use call
+obj.obfn.call(person, "Hello"); // don't need the extra parenthesis () this instantly calls the method on its own
+// can also use apply
+obj.obfn.apply(person, ["Hello"]); //it also calls the function immediately but you pass the arguments as arrays
