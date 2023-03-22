@@ -777,3 +777,55 @@ obj.obfn.bind(person, "Hello")(); //can also use call
 obj.obfn.call(person, "Hello"); // don't need the extra parenthesis () this instantly calls the method on its own
 // can also use apply
 obj.obfn.apply(person, ["Hello"]); //it also calls the function immediately but you pass the arguments as arrays
+
+// creating an account object
+var account = {
+  cash: 12000,
+  _name: "Default", //this is a property on my object
+  withdraw: function (amount) {
+    this.cash -= amount;
+    console.log(
+      "Withdrawal amount = " + amount + " , new cash reserve = " + this.cash
+    );
+  },
+};
+
+account.withdraw(1000);
+
+// can create a method to deposit money
+account.deposit = function () {};
+// use the static built-in object instead
+Object.defineProperty(account, "deposit", {
+  // configure the property
+  // use the keyword value
+  value: function (amount) {
+    this.cash += amount;
+    console.log(
+      "Deposit amount = " + amount + " , new cash reserve = " + this.cash
+    );
+  },
+}); //pass as a first argument the object on which I want to define a new property and for the 2nd argument pass a string as the name of the property that you want to create
+//the third argument is the JavaScript object
+account.deposit(3000);
+
+Object.defineProperty(account, "name", {
+  // value: "ID - 00001",
+  // make it writable by setting writable to true
+  // writable: true,
+  // enumerable: true,
+  // getter
+  get: function () {
+    // this function will be called whenever I try to acess this name value
+    return this._name;
+  },
+  // setter
+  set: function (name) {
+    if (name == "Max") {
+      this._name = name;
+    }
+  },
+});
+console.log(account.name);
+account.name = "ID - 00003";
+console.log(account.name);
+console.log(account._name);
