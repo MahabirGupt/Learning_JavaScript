@@ -853,3 +853,15 @@ for (var field in person) {
   // if want to print out the value of the field and not the name only
   console.log(person[field]); //use the syntax object_name[field] to access the value of an object field
 }
+// try and catch method
+try {
+  //execute the code
+  // demonstrate a way where we will get an error
+  test();
+} catch (error) {
+  // if there is an error execute this code
+  console.log("error");
+} finally {
+  // this code should always get executed
+  console.log("execute this code");
+}
