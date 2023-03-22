@@ -829,3 +829,27 @@ console.log(account.name);
 account.name = "ID - 00003";
 console.log(account.name);
 console.log(account._name);
+
+// creating and object person
+var person = {
+  name: "Anishkaa",
+  age: "7",
+  greet: function () {
+    console.log("Hello");
+  },
+};
+// delete a field of an object
+// delete person.name;
+// console.log(person);
+// console.log(person.name);
+
+// checking if a certain field exist in an object
+console.log("name" in person);
+
+// loop through all the properties of an object
+for (var field in person) {
+  // name of field can be anything
+  console.log(field);
+  // if want to print out the value of the field and not the name only
+  console.log(person[field]); //use the syntax object_name[field] to access the value of an object field
+}
