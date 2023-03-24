@@ -865,3 +865,18 @@ try {
   // this code should always get executed
   console.log("execute this code");
 }
+
+// closures
+function generator(input) {
+  var number = input;
+  // function generator will return another function called closure
+  return function () {
+    //return function does not have a name
+    return number * 2;
+  };
+}
+var calc = generator(900);
+console.log(calc);
+console.log(calc());
+var calcAnother = generator(1000);
+console.log(calcAnother());
