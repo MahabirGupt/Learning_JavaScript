@@ -902,3 +902,17 @@ var obj = {}; // created the obj in global scope so will print obj
   obj.name = "Mahabir"; //changing the global scope object and not local scope variable
 })(obj);
 console.log(obj);
+
+// Built-in methods and properties
+// using arguments
+function message(message) {
+  console.log(message);
+  // inside a function we have acess to certain variable
+  console.log(arguments); // did not create the variable argument
+  console.log(arguments[0]); // access the first argument
+  console.log(arguments[2]); // access an argument which is not there
+  console.log(arguments.length); //asssessing the length property to check the number of arguments
+}
+
+message("Hi"); // pass one argument
+message("Hello", 10); // pass two arguments
