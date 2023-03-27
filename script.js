@@ -947,3 +947,9 @@ function message(message) {
   console.log(this.name);
 }
 message();
+
+// setTimout function // it is a built-in function or a method in the window object
+setTimeout(function () {
+  // pass 2 arguments
+  console.log("Finished!");
+}, 2000); // add a comma to add the 2nd argument and indicate the time in milliseconds
