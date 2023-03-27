@@ -953,3 +953,20 @@ setTimeout(function () {
   // pass 2 arguments
   console.log("Finished!");
 }, 2000); // add a comma to add the 2nd argument and indicate the time in milliseconds
+
+// setInterval functions //it is registered on the window object. It is method of the window object.
+setInterval(function () {
+  // expects a function as the first argument
+  console.log("Ping!");
+}, 500); // provide the interval in milliseconds as the 2nd argument
+
+// to stop the setInterval functions
+var interval = setInterval(function () {
+  // expects a function as the first argument
+  console.log("Ping!");
+}, 500);
+
+setTimeout(function () {
+  // to stop the interval use clearInterval() method
+  clearInterval(interval); // pass the interval variable
+}, 2500);
