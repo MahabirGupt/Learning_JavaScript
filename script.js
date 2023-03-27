@@ -916,3 +916,25 @@ function message(message) {
 
 message("Hi"); // pass one argument
 message("Hello", 10); // pass two arguments
+
+function message(message) {
+  console.log(message);
+}
+console.log(message.name); // will print "message" which is name of function
+
+function messageName(message) {
+  console.log(message);
+}
+
+var msg = messageName;
+console.log(msg.name);
+console.log(msg.length);
+
+function messageName(message, numbers) {
+  console.log(message);
+}
+
+var msg = messageName;
+console.log(msg.length);
+
+// another way
