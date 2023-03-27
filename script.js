@@ -880,3 +880,25 @@ console.log(calc);
 console.log(calc());
 var calcAnother = generator(1000);
 console.log(calcAnother());
+
+// Immediately Invoked Functions Executions (IIFEs)
+(function calc() {
+  // this function gets executed automatically
+  console.log("Calc");
+  var number = 10;
+  console.log(number);
+})();
+// add parenthesis() around the above function and after the function
+console.log(number); //will return an error because number is a local scope and not a global scope
+
+(function calc(input) {
+  // this function gets executed automatically
+  var number = input;
+  console.log(number);
+})(10);
+
+var obj = {}; // created the obj in global scope so will print obj
+(function calc(input) {
+  obj.name = "Mahabir"; //changing the global scope object and not local scope variable
+})(obj);
+console.log(obj);
