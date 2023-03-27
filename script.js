@@ -937,4 +937,13 @@ function messageName(message, numbers) {
 var msg = messageName;
 console.log(msg.length);
 
-// another way
+// another way to write a function
+var msg = function (message) {
+  console.log(message);
+};
+console.log(msg.name);
+
+function message(message) {
+  console.log(this.name);
+}
+message();
