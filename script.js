@@ -984,3 +984,13 @@ console.log(b.toString());
 
 var b = 2.9;
 console.log(b.toFixed(2)); // toFixed rounds it and we have to specify the number of decimal places here as an argument
+
+// string function
+var string = "Any text";
+console.log(string);
+console.log(string.length);
+console.log(string[2]); // access the element of the array
+console.log(string.charAt(7)); // the charAt() function does the same thing
+console.log(string.concat(" add a new string")); // use the concat() method and add a new string
+console.log(string.toUpperCase());
+console.log(string.split(" ")); // splitting the whitespace between "Any text"
