@@ -994,3 +994,9 @@ console.log(string.charAt(7)); // the charAt() function does the same thing
 console.log(string.concat(" add a new string")); // use the concat() method and add a new string
 console.log(string.toUpperCase());
 console.log(string.split(" ")); // splitting the whitespace between "Any text"
+
+var string = "Some text          ";
+console.log(string.trim());
+
+var string = "   Some text          ";
+console.log(string.trim());
