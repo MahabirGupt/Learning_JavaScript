@@ -970,3 +970,17 @@ setTimeout(function () {
   // to stop the interval use clearInterval() method
   clearInterval(interval); // pass the interval variable
 }, 2500);
+
+// Transforming formats and values
+var a = "5";
+console.log(a);
+console.log(parseInt(a)); // parseInt() is a window object and a global object
+
+var a = "FBB123";
+console.log(parseInt(a, 16)); // 16 means convert from decimal to hexadecimal
+
+var b = 8;
+console.log(b.toString());
+
+var b = 2.9;
+console.log(b.toFixed(2)); // toFixed rounds it and we have to specify the number of decimal places here as an argument
