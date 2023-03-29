@@ -1008,3 +1008,27 @@ console.log(pi);
 
 var e = Math.E;
 console.log(e);
+
+// using absolute (abs) method
+var num = -3;
+console.log(Math.abs(num));
+
+// using round method
+var number = 1.29;
+console.log(Math.round(number));
+
+// using ceil method
+var number = 2.37;
+console.log(Math.ceil(number));
+
+// using floor method
+var number = 2.99;
+console.log(Math.floor(number));
+
+// using exponential calculations
+var number = 2;
+console.log(Math.exp(number)); // this is the same as e to the power of a which is e to the power of 2
+
+// using logarithm
+var e = Math.E;
+console.log(Math.log(e));
