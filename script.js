@@ -1032,3 +1032,20 @@ console.log(Math.exp(number)); // this is the same as e to the power of a which 
 // using logarithm
 var e = Math.E;
 console.log(Math.log(e));
+
+// using the max function
+console.log(Math.max(10, 1000, 100));
+
+// using the min function
+console.log(Math.min(10, 1000, 100));
+
+// using Math.random() function
+console.log(Math.random());
+
+// to get a random num between 0 and 100 excluding 100
+var rnd = Math.random() * 100; // to get a random num between 0 and 100
+console.log(Math.round(rnd)); // to round off the random number to the nearest whole number
+
+// to get a random num between 1 and 100 including 100
+var rnd = Math.floor(Math.random() * 100) + 1; // to get a random num between 1 and 100 by rounding down the number
+console.log(Math.round(rnd)); // to round off the random number to the nearest whole number
