@@ -1069,3 +1069,42 @@ console.log(Date.parse("2023/02/20"));
 var today = new Date();
 console.log(today.getDate()); // getDate() gets today's date
 console.log(today.getDay());
+
+// Regular Expressions
+var string = "abc";
+var pattern = /ab/; // this is an object
+console.log(pattern);
+
+// running pattern
+console.log(pattern.exec(string)); // will print ["ab"]
+
+// Regular Expressions
+var string = "ac";
+var pattern = /ab/; // this is an object
+console.log(pattern);
+
+// running pattern
+console.log(pattern.exec(string)); // will print null
+
+// Regular Expressions
+var string = "abc";
+var pattern = /bc/; // this is an object
+console.log(pattern);
+
+// running pattern
+console.log(pattern.exec(string)); // will print ["bc"]
+
+// Regular Expressions
+var string = "abab";
+var pattern = /ab/; // this is an object
+console.log(pattern);
+
+// running pattern
+console.log(pattern.exec(string)); // will print ["ab"] only
+// can also do this
+console.log(string.match(pattern));
+
+// using test function
+var string = "abab";
+var pattern = /ab/; // this is an object
+console.log(pattern.test(string)); // will print true
