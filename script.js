@@ -1049,3 +1049,23 @@ console.log(Math.round(rnd)); // to round off the random number to the nearest w
 // to get a random num between 1 and 100 including 100
 var rnd = Math.floor(Math.random() * 100) + 1; // to get a random num between 1 and 100 by rounding down the number
 console.log(Math.round(rnd)); // to round off the random number to the nearest whole number
+
+// using the date object
+var today = new Date(); // Date() is a built in object
+console.log(today); // will not see the date
+console.log(today.toString());
+
+var date = new Date(1981, 01, 10); // generate a specific date. array elements start with zero so 01 is Feb
+console.log(date.toString());
+
+var date = new Date(2023, 01, 29); // declaring a date that is not in the calendar.
+console.log(date.toString());
+
+var date = new Date("2023/02/20"); // declaring a date as a string. Do not have to start the month at zero for Jan
+console.log(date.toString());
+
+// using static methods to create date
+console.log(Date.parse("2023/02/20"));
+var today = new Date();
+console.log(today.getDate()); // getDate() gets today's date
+console.log(today.getDay());
