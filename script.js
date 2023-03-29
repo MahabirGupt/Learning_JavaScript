@@ -1000,3 +1000,11 @@ console.log(string.trim());
 
 var string = "   Some text          ";
 console.log(string.trim());
+
+// Math object
+// using pi
+var pi = Math.PI;
+console.log(pi);
+
+var e = Math.E;
+console.log(e);
