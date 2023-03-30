@@ -1108,3 +1108,36 @@ console.log(string.match(pattern));
 var string = "abab";
 var pattern = /ab/; // this is an object
 console.log(pattern.test(string)); // will print true
+
+// window object
+// accessing the width of the webpage
+console.log(window.innerWidth);
+// don't have to include the window object
+console.log(innerWidth);
+
+// accessing the outerwidth of the webpage
+console.log(outerWidth);
+
+// accessing the height of the webpage
+console.log(innerHeight); // same as console.log(window.innerHeight);
+console.log(outerHeight);
+
+// accessing the local storage
+console.log(localStorage);
+
+// storing something in the local storage using the setItem Method() on the storage
+localStorage.setItem("key1", 1000); // give it a name
+console.log(localStorage.getItem("key1"));
+
+// accessing the session storage
+sessionStorage.setItem("key1", 1000); // give it a name
+console.log(sessionStorage.getItem("key1"));
+
+// location property
+console.log(window.location); // having access to the location that you are currently at
+
+// document property
+console.log(window.document); // having access to the DOM document
+
+// accessing a website
+window.open("http://www.google.com");
