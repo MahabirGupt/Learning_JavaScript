@@ -1141,3 +1141,12 @@ console.log(window.document); // having access to the DOM document
 
 // accessing a website
 window.open("http://www.google.com");
+
+//accessing location object
+console.log(location); // do not have to include window . because it is a global object
+// print the hostname
+console.log(location.hostname);
+// print the path
+console.log(location.pathname);
+// reloading the webpage
+location.reload();
