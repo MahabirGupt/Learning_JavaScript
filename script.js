@@ -1150,3 +1150,14 @@ console.log(location.hostname);
 console.log(location.pathname);
 // reloading the webpage
 location.reload();
+
+// document object
+console.log(document);
+// access the url
+console.log(document.URL);
+// title property
+console.log(document.title);
+// body of document
+console.log(document.body);
+// accessing the body's children
+console.log(document.body.children);
