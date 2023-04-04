@@ -1178,3 +1178,8 @@ console.log(
 );
 
 console.log(document.body.firstElementChild.firstElementChild.parentElement);
+
+// selecting elements using methods which the document offer
+console.log(document.getElementsByTagName("li"));
+console.log(document.getElementsByClassName("simple"));
+console.log(document.getElementById(""));
