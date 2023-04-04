@@ -1161,3 +1161,20 @@ console.log(document.title);
 console.log(document.body);
 // accessing the body's children
 console.log(document.body.children);
+// accessing the body's children
+console.log(document.body.children[0].textContent);
+document.body.children[0].textContent = "Something else!";
+document.body.children[0].style.backgroundColor = "red";
+console.log(document.body.children[0].children[0]);
+// accessing the first child
+console.log(document.body.firstChild);
+// accessing the first element child
+console.log(document.body.firstElementChild);
+// accessing the last element child
+console.log(document.body.lastElementChild);
+
+console.log(
+  document.body.firstElementChild.firstElementChild.nextElementSibling
+);
+
+console.log(document.body.firstElementChild.firstElementChild.parentElement);
