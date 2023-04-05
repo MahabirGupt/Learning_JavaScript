@@ -1219,3 +1219,11 @@ li.appendChild(paragraph);
 var li = document.querySelector("li"); // it is the first list
 var a = li.firstElementChild;
 li.insertBefore(paragraph, a);
+
+// removing an element
+var a = document.querySelectorAll("a")[1]; // selecting the second link
+a.parentElement.removeChild(a);
+// for newer brosers can use remove() method
+a.remove();
+// removing an element
+a.parentNode.removeChild(a); // does not matter whether use parentNode or parentElement
