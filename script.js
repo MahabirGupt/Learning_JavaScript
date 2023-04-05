@@ -1227,3 +1227,12 @@ a.parentElement.removeChild(a);
 a.remove();
 // removing an element
 a.parentNode.removeChild(a); // does not matter whether use parentNode or parentElement
+
+// Dialogs
+// alert function
+alert("This is an alert!");
+
+// confirm function
+console.log(confirm("Are you sure?"));
+// using prompts
+console.log(prompt("Enter name please: "));
