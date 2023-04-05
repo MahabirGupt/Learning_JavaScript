@@ -1183,3 +1183,39 @@ console.log(document.body.firstElementChild.firstElementChild.parentElement);
 console.log(document.getElementsByTagName("li"));
 console.log(document.getElementsByClassName("simple"));
 console.log(document.getElementById(""));
+
+// selecting elements using query selector
+console.log(document.querySelector("h1"));
+console.log(document.querySelector(".simple"));
+console.log(document.querySelectorAll(".simple"));
+
+// selecting id using query selector
+console.log(document.querySelector("#easy"));
+
+document.querySelector("#easy").style.backgroundColor = "red";
+
+// selecting the anchor tag of the 1st item on the list
+document.querySelector("a").style.backgroundColor = "red";
+
+// replacing the text of the link
+document.querySelector(".simple").firstElementChild.textContent = "Hello!";
+
+// creating a new element
+// creating a paragraph
+var paragraph = document.createElement("P"); // it is not added to the DOM yet
+paragraph.textContent = "A new paragraph!";
+paragraph.style.fontSize = "17px";
+console.log(paragraph);
+// add the paragraph to the HTML document
+// selecting the first element on the ul
+var a = document.querySelector("a"); // it is the first anchor tag
+a.appendChild(paragraph);
+
+// adding the paragraph after the first list
+var li = document.querySelector("li"); // it is the first anchor tag
+li.appendChild(paragraph);
+
+// adding the paragraph before the unordered list
+var li = document.querySelector("li"); // it is the first list
+var a = li.firstElementChild;
+li.insertBefore(paragraph, a);
