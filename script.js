@@ -1236,3 +1236,57 @@ alert("This is an alert!");
 console.log(confirm("Are you sure?"));
 // using prompts
 console.log(prompt("Enter name please: "));
+
+// Event handlers
+// onload handler
+window.onload = function () {
+  console.log("Window loaded!");
+};
+// button onlick
+var btn = document.querySelector("button"); //selecting button by the tagname
+btn.onclick = function () {
+  console.log("Clicked!");
+};
+
+// Event listeners
+// Selecting multiple onclick button functions
+var btn = document.querySelector("button");
+btn.addEventListener("click", listener1);
+btn.addEventListener("click", listener2);
+
+setTimeout(function () {
+  // remove one of the event listener
+  btn.removeEventListener("click", listener1);
+}, 2000);
+
+function listener1() {
+  console.log("Listener 1");
+}
+function listener2() {
+  console.log("Listener 2");
+}
+// selecting inner div and outer div
+var inner = document.querySelector("#inner");
+var outer = document.querySelector("#outer");
+inner.addEventListener("click", innerListener);
+outer.addEventListener("click", outerListener);
+function innerListener() {
+  console.log("Clicked inner!");
+}
+function outerListener() {
+  console.log("Clicked outer!");
+}
+
+// selecting inner div without outer div for overlapping div
+var inner = document.querySelector("#inner");
+var outer = document.querySelector("#outer");
+inner.addEventListener("click", innerListener);
+outer.addEventListener("click", outerListener);
+function innerListener(event) {
+  console.log(event.bubbles);
+  event.stopPropagation();
+  console.log("Clicked inner!");
+}
+function outerListener() {
+  console.log("Clicked outer!");
+}
