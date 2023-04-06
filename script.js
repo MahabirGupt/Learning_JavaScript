@@ -1319,3 +1319,15 @@ function innerListener(event) {
 function outerListener() {
   console.log("Clicked outer!");
 }
+
+// changing propagation order
+var inner = document.querySelector("#inner");
+var outer = document.querySelector("#outer");
+inner.addEventListener("click", innerListener);
+outer.addEventListener("click", outerListener, true); //add true to this addEventListener
+function innerListener() {
+  console.log("Clicked inner!");
+}
+function outerListener() {
+  console.log("Clicked outer!");
+}
