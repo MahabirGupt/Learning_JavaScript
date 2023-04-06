@@ -1290,3 +1290,32 @@ function innerListener(event) {
 function outerListener() {
   console.log("Clicked outer!");
 }
+
+// selecting inner div without outer div for overlapping div
+var inner = document.querySelector("#inner");
+var outer = document.querySelector("#outer");
+inner.addEventListener("click", innerListener);
+outer.addEventListener("click", outerListener);
+function innerListener(event) {
+  console.log(event.target); //use event.target to do some other things
+  event.target.style.backgroundColor = "red";
+  event.stopPropagation();
+  console.log("Clicked inner!");
+}
+function outerListener() {
+  console.log("Clicked outer!");
+}
+
+// extracting the position where the click or event happened
+var inner = document.querySelector("#inner");
+var outer = document.querySelector("#outer");
+inner.addEventListener("click", innerListener);
+outer.addEventListener("click", outerListener);
+function innerListener(event) {
+  console.log(event.clientX, event.clientY); //extract the position of where the click or the event happened
+  event.stopPropagation();
+  console.log("Clicked inner!");
+}
+function outerListener() {
+  console.log("Clicked outer!");
+}
