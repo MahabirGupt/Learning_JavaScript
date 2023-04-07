@@ -1355,3 +1355,27 @@ http.onreadystatechange = function () {
 };
 // send the request
 http.send();
+
+// POST Request (Send Data)
+var http = new XMLHttpRequest(); // XMLHttpRequest is the name of this request object
+var url = "https://jsonplaceholder.typicode.com/posts"; //this is the url the request is sent to
+var method = "POST"; //specify the HTTP method that I want to use. In this case is POST request
+
+var data = "title=Post%20Title&body=Body"; // setting up a dummy data. %20 represents whitespace
+
+http.open(method, url); //open a connection but it is still not sent
+
+http.setRequestHeader("Content", "application/x-www-form-urlencoded");
+
+// onreadystatechange event handler
+http.onreadystatechange = function () {
+  // add a function to handle this event
+  if (http.readyState === XMLHttpRequest.DONE && http.status === 201) {
+    // 201 is the status that I will get back when I send a POST Request which means OK a resource was created
+    console.log(JSON.parse(http.responseText));
+  } else if (http.readyState === XMLHttpRequest.DONE && http.status !== 201) {
+    console.log("Error!");
+  }
+};
+// send the request
+http.send(data); //attaching the data that I want to send as the argument
