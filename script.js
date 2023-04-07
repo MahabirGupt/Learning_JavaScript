@@ -1331,3 +1331,27 @@ function innerListener() {
 function outerListener() {
   console.log("Clicked outer!");
 }
+
+// Setup and Sending a GET Request
+var http = new XMLHttpRequest(); // XMLHttpRequest is the name of this request object
+var url = "https://jsonplaceholder.typicode.com/posts"; //this is the url the request is sent to
+var method = "GET"; //specify the HTTP method that I want to use. In this case is GET request
+http.open(method, url); //open a connection but it is still not sent
+// onreadystatechange event handler
+http.onreadystatechange = function () {
+  // add a function to handle this event
+  if (http.readyState === XMLHttpRequest.DONE && http.status === 200) {
+    // readyState is another built in property
+    // XMLHttpRequest.DONE is a static field and is equals to 4
+    // 200 is the http status code for OK
+    console.log(http.responseText); //this is the body of my response
+    // console.log(JSON.parse(http.responseText));
+    console.log(JSON.parse(http.responseText)[0].id);
+  } else if (http.readyState === XMLHttpRequest.DONE && http.status !== 200) {
+    // set up the condition to handle the case where there is an error
+    // the error is it is not 200 or OK
+    console.log("Error!");
+  }
+};
+// send the request
+http.send();
